@@ -1,14 +1,41 @@
 import React from 'react';
+import computer from '../images/icons/computer.svg';
+import repair from '../images/icons/repair.svg';
 import api from '../images/icons/api.svg';
+import algo from '../images/icons/algo.svg';
+import puzzel from '../images/icons/puzzle.svg';
+
+
+import Skillcard from './Skillcard';
 const skills = [
     {
-        icon:api,
-        title: "Lorem ipsum dolor sit",
-        about:"Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+        icon:computer,
+        title: "Frontend Development",
+        about:"I can build a beautiful and scalable SPA using HTML, CSS and React.js"
+    },
+    {
+        icon:repair,
+        title: "Backend Development",
+        about:"handle database, server,api using and SQL"
     },
     {
         icon:api,
-        title: "Lorem ipsum dolor sit",
+        title: "Api Development",
+        about:"I can develop robust REST API using django-rest-api"
+    },
+    {
+        icon:algo,
+        title: "Competitve Coder",
+        about:" a daily problem solver HackerRank and Leetcode"
+    },
+    {
+        icon:puzzel,
+        title: "UI/UX designer",
+        about:"minimalistic user interface designer using figma and framer "
+    },
+    {
+        icon:computer,
+        title: "Whatever",
         about:"Lorem ipsum dolor sit, amet consectetur adipisicing elit."
     }
 ]
@@ -24,15 +51,7 @@ const About = () => {
               <div className="row">
                  {
                      skills.map(skill =>
-                        <div className="col-lg-6">
-                             <div className="skill-card">
-                                 <img src={skill.icon} alt="icon" className="skill-card_icon"/>
-                                <div className="skill-card-body">
-                                  <h6 className="skill-card_title">{skill.title}</h6> 
-                                  <p className="skill_card_content">{skill.about}</p>
-                                </div>
-                             </div>
-                        </div>
+                        <Skillcard skill={skill} />
                         )
                  }
               </div>

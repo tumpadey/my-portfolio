@@ -12,8 +12,8 @@ function App() {
   return (
     <Router>
      <div className="app">
-       <div className="container">
-         <div className="row">
+       <div className="container app_container">
+         <div className="row app_row">
        
          <div className="col-3">
                
